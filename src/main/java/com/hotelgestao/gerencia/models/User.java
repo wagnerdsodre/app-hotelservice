@@ -1,20 +1,21 @@
 package com.hotelgestao.gerencia.models;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
-@Entity(name = "user")
+@Entity
 public class User implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -24,5 +25,21 @@ public class User implements Serializable {
 	
 	private String name;
 	private String email;
+	
+	
+
+	public User(Long id, String name, String email) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.email = email;
+	}
+	
+	
+	
+	
+	
+	
+	
 
 }
